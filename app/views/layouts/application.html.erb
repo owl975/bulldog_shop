@@ -29,16 +29,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Buy Buy BullDog</a>
+      <a class="navbar-brand" href="/">Buy Buy BullDog</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Why shop with us</a></li>
-		<li><a href="#">FAQ</a></li>
-		<li><a href="#">Contact Us</a></li>         
+        <li><%= link_to "Shop", products_path %></li>
+        <li><%= link_to "Why shop with us?", page_about_path %></li>
+		<li><%= link_to "FAQ", page_faq_path %></li>
+		<li><%= link_to "Get in touch", page_contact_path %></li>
+    <li><a href=""> hello</a> </li>         
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
