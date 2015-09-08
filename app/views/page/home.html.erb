@@ -13,17 +13,18 @@
 			
     		<% @products.each do |product| %>
       			<div class='col-md-5' style="color:#FF7800;">
-        			<li><%= product.title %></li>
+        			<li><div style="color: #2ab29a;"><b><%= link_to product.title, product %></b></div></li>
         			<li><%= product.description %></li>
-        			<li><div><%= image_tag(product.image_url, :size => "250") %></div></li>
-        			<li><%= product.price %></li>
-        			<li><%= product.category %></li>
-        			<li><%= link_to 'Details', product %>
+        			<li>$ <%= product.price %></li>
+              <li><div><%= image_tag(product.image_url, :size => "250") %></div></li>
+        			<li><button class="btn btn-controller"><%= link_to 'Details', product %></button>
+              <button class="btn"><a href="/cart/<%= product.id %>"> Add To Cart</a></button>
         			<%= link_to 'Edit', edit_product_path(product) %>
         			<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-        			<a href="/cart/<%= product.id %>"> Add To Cart</a></li>
+        			</li>
         			<br>
         			<br>
+              <hr>
         		</div>
 
       

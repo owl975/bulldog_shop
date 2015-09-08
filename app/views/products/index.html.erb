@@ -1,34 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<div class='col-md-10'>
-  <%= link_to 'New Product', new_product_path %>
+<div class="container">
+  <div class="row">
+    <div class='col-md-10'>
+      <%= link_to 'New Product', new_product_path %>
       <h3 style="color:#FF7800;">All the cool stuff!</h3>
       
         <% @products.each do |product| %>
             <div class='col-md-5' style="color:#FF7800;">
-              <li><%= link_to product.title, product %></li>
+              <li><div style="color: #2ab29a;"><b><%= link_to product.title, product %></b></div></li>
               <li><%= product.description %></li>
+              <li>$ <%= product.price %></li>
               <li><div><%= image_tag(product.image_url, :size => "250") %></div></li>
-              <li><%= product.price %></li>
-              <li><%= product.category %></li>
-              <li><%= link_to 'Details', product %>
+              <li><button class="btn btn-controller"><%= link_to 'Details', product %></button>
+              <button class="btn"><a href="/cart/<%= product.id %>"> Add To Cart</a></button>
               <%= link_to 'Edit', edit_product_path(product) %>
               <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-              <a href="/cart/<%= product.id %>"> Add To Cart</a></li>
+              </li>
               <br>
               <br>
+              <hr>
             </div>
 
       
         <% end %>
     </div>  
-<br>
-
-
-</div>
-<div class="col-md-2 well">
+    <div class="col-md-2 well">
           <p><h5><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp Free Support</h5><p>
           We'll help you figure out which treats and toys are safe for your breed. Just call or e-mail us.</p></p>
           <p><h5><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp Quality Assurance</h5><p>We check all the produts we ship so you can rely on us. we only source from the most pretentious local organic and gluten free sources</p></p>
           <p><h5><span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp Next Day Devliery</h5>Order before 4pm and your order will be with you the next business day.</p>
+    </div>
+  </div>
 </div>
