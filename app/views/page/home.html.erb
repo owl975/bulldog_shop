@@ -6,3 +6,37 @@
   <p>-Wally </p>
 </div>
 </div>
+<div class="container">
+	<div class="row">
+		<div class='col-md-10'>
+			<h3 style="color:#FF7800;">Featured Products</h3>
+			
+    		<% @products.each do |product| %>
+      			<div class='col-md-5' style="color:#FF7800;">
+        			<li><%= product.title %></li>
+        			<li><%= product.description %></li>
+        			<li><div><%= image_tag(product.image_url, :size => "250") %></div></li>
+        			<li><%= product.price %></li>
+        			<li><%= product.category %></li>
+        			<li><%= link_to 'Details', product %>
+        			<%= link_to 'Edit', edit_product_path(product) %>
+        			<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        			<a href="/cart/<%= product.id %>"> Add To Cart</a></li>
+        			<br>
+        			<br>
+        		</div>
+
+      
+    		<% end %>
+
+		</div>	
+
+
+		<div class="col-md-2 well">
+      		<p><h5><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp Free Support</h5><p>
+        	We'll help you figure out which treats and toys are safe for your breed. Just call or e-mail us.</p></p>
+      		<p><h5><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp Quality Assurance</h5><p>We check all the produts we ship so you can rely on us. we only source from the most pretentious local organic and gluten free sources</p></p>
+      		<p><h5><span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp Next Day Devliery</h5>Order before 4pm and your order will be with you the next business day.</p>
+		</div>
+	</div>
+</div>

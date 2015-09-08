@@ -1,37 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<div class='col-md-10'>
+  <%= link_to 'New Product', new_product_path %>
+      <h3 style="color:#FF7800;">All the cool stuff!</h3>
+      
+        <% @products.each do |product| %>
+            <div class='col-md-5' style="color:#FF7800;">
+              <li><%= link_to product.title, product %></li>
+              <li><%= product.description %></li>
+              <li><div><%= image_tag(product.image_url, :size => "250") %></div></li>
+              <li><%= product.price %></li>
+              <li><%= product.category %></li>
+              <li><%= link_to 'Details', product %>
+              <%= link_to 'Edit', edit_product_path(product) %>
+              <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <a href="/cart/<%= product.id %>"> Add To Cart</a></li>
+              <br>
+              <br>
+            </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Price</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.title %></td>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= product.price %></td>
-        <td><%= product.category %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><a href="/cart/<%= product.id %>"> Add To Cart</a></td>
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+      
+        <% end %>
+    </div>  
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+
+</div>
+<div class="col-md-2 well">
+          <p><h5><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp Free Support</h5><p>
+          We'll help you figure out which treats and toys are safe for your breed. Just call or e-mail us.</p></p>
+          <p><h5><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp Quality Assurance</h5><p>We check all the produts we ship so you can rely on us. we only source from the most pretentious local organic and gluten free sources</p></p>
+          <p><h5><span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp Next Day Devliery</h5>Order before 4pm and your order will be with you the next business day.</p>
+</div>

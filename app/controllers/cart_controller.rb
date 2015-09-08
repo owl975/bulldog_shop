@@ -1,4 +1,7 @@
 class CartController < ApplicationController
+ 
+ before_action :authenticate_user!, except: [:index]
+
   def add
   	id = params[:id]
   	#if cart has been created then use existing cart
@@ -14,7 +17,7 @@ class CartController < ApplicationController
   	else
   		cart[id] = 1
   	end
-  		redirect_to :action => index
+  		redirect_to :action => :index
   end
 
   # clear the cart

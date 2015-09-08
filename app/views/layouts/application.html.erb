@@ -29,7 +29,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Buy Buy BullDog</a>
+      <a class="navbar-brand" href="/">BuyBuy BullDog</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,15 +38,14 @@
         <li><%= link_to "Shop", products_path %></li>
         <li><%= link_to "Why shop with us?", page_about_path %></li>
 		<li><%= link_to "FAQ", page_faq_path %></li>
-		<li><%= link_to "Get in touch", page_contact_path %></li>
-    <li><a href=""> hello</a> </li>         
+		<li><%= link_to "Get in touch", page_contact_path %></li>         
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-        	<li><%= link_to "Sing Out", destroy_user_session_path, method: :delete %></li>
+        	<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %><li>
         <% else %>
-        	<li><%= link_to "Sing In", new_user_session_path %></li>
-        	<li><%= link_to "Sing Up", new_user_registration_path %></li>
+        	<li><%= link_to "Log In", new_user_session_path %></li>
+        	<li><%= link_to "Sign Up", new_user_registration_path %></li>
 
         <% end %>
       </ul>
@@ -59,6 +58,11 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= yield %>
-
+  <!--   <div class="col-md-2">
+      <li><h4>Free Support</h4><p>
+        We'll help you figure out which treats and toys are safe for your breed. Just call or e-mail us.</p></li>
+      <li><h4>Quality Assurance</h4><p>We check all the produts we ship so you can rely on us. we only source from the most pretentious local organic and gluten free sources</p></li>
+      <li><h4>Next Day Devliery</h4>Order before 4pm and your order will be with you the next business day.</li>
+    </div> -->
 </body>
 </html>

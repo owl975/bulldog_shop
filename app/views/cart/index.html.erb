@@ -1,2 +1,24 @@
-<h1>Cart#index</h1>
-<p>Find me in app/views/cart/index.html.erb</p>
+<h1>Your Cart </h1>
+
+<% if @cart.empty? %>
+	<p> Your cart is currently empty </p>
+	<%else%>
+		<%= link_to 'Empty Your Cart', cart_clear_path %>
+<% end %>
+<% total = 0 %>
+
+<ul> 
+	<% @cart.each do | id, quantity | %>
+	<% product = Product.find_by_id(id) %>
+	<li> 
+		<%= link_to product.title, product %>
+		<%= number_to_currency(product.price, :unit => '$') %>
+		Qty = <%= quantity %>
+	</li>
+	<% total +=  quantity * product.price %>
+
+<% end %>
+
+<p><b><%= number_to_currency(total, :unit => '$') %></b></p>
+</ul>
+
