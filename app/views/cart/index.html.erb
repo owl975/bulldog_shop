@@ -1,16 +1,23 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-4" style="color:#FF7800;">
 
 
 <h1>Your Cart </h1>
 
+<%= link_to 'Back', products_path %>
+<br>
 <% if @cart.empty? %>
 	<p> Your cart is currently empty </p>
 	<%else%>
 		<%= link_to 'Empty Your Cart', cart_clear_path %>
 <% end %>
 <% total = 0 %>
+
+<br>
+<br>
 
 <ul> 
 	<% @cart.each do | id, quantity | %>
@@ -27,6 +34,10 @@
 <p><b><%= number_to_currency(total, :unit => '$') %></b></p>
 </ul>
 
-</div>
-</div>
+		</div>
+    	<div class="col-md-5">
+      		<img src="http://i.imgur.com/UJnelaL.png" alt="Smiley Wally" style="width:100%;">
+
+		</div>
+	</div>
 </div>

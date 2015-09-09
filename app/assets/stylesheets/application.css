@@ -24,6 +24,24 @@
 
  }
 
+.footer {
+  width:50%;
+  color: #FF7800;
+  font-size: 50%;
+  float:right;
+  background-color:#fbd668;
+}
+
+.footerpic {
+  width:50%;
+  height:186px;
+  background-image: url("http://i.imgur.com/VuuIpiW.png");
+  background-size: cover;
+  float:right;
+
+
+}
+
 .navbar-default {
   background-color: #fbd668;
   border-color: #fbd885;
