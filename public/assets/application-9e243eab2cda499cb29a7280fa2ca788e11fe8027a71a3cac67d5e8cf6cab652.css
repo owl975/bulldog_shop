@@ -1,0 +1,227 @@
+/* line 5, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/page.scss */
+.header {
+  margin-top: -75px;
+  height: 350px;
+  background-image: url("http://i.imgur.com/DlvafNf.png");
+  background-size: cover;
+  color: #FF7800;
+  background-position: 0% 0% 0% -50%;
+}
+
+/* line 14, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/page.scss */
+.wallyquote {
+  font-family: 'Rock Salt', cursive;
+}
+
+/* line 19, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/page.scss */
+.quote {
+  margin-right: 25px;
+}
+
+/* line 24, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/page.scss */
+.textblock {
+  margin-bottom: 50px;
+}
+
+/* line 29, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/page.scss */
+.well {
+  background-color: #fbd668;
+  color: #2ab29a;
+}
+/* line 1, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+li {
+  list-style-type: none;
+}
+
+/* line 13, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 19, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 25, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #2ab29a;
+}
+/* line 28, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #2ab29a;
+}
+/* line 32, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #026568;
+  text-decoration: none;
+}
+
+/* line 39, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 44, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 48, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 54, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 62, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 73, /Users/mtgomez/dev/Bulldog_shop/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+.thumbnail {
+  height: 200px;
+}
+
+ a {
+   color: #2ab29a;
+ }
+
+ button {
+  background-color: #fbd668;
+  color: #2ab29a;
+
+ }
+
+.footer {
+  width:50%;
+  color: #FF7800;
+  font-size: 50%;
+  float:right;
+  background-color:#fbd668;
+}
+
+.footerpic {
+  width:50%;
+  height:186px;
+  background-image: url("http://i.imgur.com/VuuIpiW.png");
+  background-size: cover;
+  float:right;
+
+
+}
+
+.navbar-default {
+  background-color: #fbd668;
+  border-color: #fbd885;
+}
+.navbar-default .navbar-brand {
+  color: #2ab29a;
+  font-family: 'Coda', cursive;
+  font-weight: 800;
+
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #fbfbfb;
+  font-family: 'Coda', cursive;
+}
+.navbar-default .navbar-text {
+  color: #2ab29a;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #2ab29a;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #fbfbfb;
+  background-color: #fbd885;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #fbfbfb;
+  background-color: #fbd885;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #fbfbfb;
+  background-color: #fbd885;
+}
+.navbar-default .navbar-toggle {
+  border-color: #fbd885;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #fbd885;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #2ab29a;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #2ab29a;
+}
+.navbar-default .navbar-link {
+  color: #2ab29a;
+}
+.navbar-default .navbar-link:hover {
+  color: #fbfbfb;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #2ab29a;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fbfbfb;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fbfbfb;
+    background-color: #fbd885;
+  }
+}
