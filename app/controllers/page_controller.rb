@@ -1,4 +1,4 @@
-class PageController < ApplicationController
+ class PageController < ApplicationController
  
   def home
   	@products = Product.all
@@ -6,7 +6,8 @@ class PageController < ApplicationController
   end
 
   def about
-
+  	@product = Product.all
+  	@cart = session[:cart]
   end
 
   def faq

@@ -24,9 +24,16 @@
 		</div>
 		<div class="col-md-2">
 			<% if user_signed_in? %>
-			<div class="well">
-			<p class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></p>
-			</div>
+				<div class="well">
+					<p class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></p>
+
+					<%= link_to cart_path do%>
+    				<i class="fi-shopping-cart"></i>
+    				My Cart
+    			 	
+  					<%end%>
+
+				</div>
 			<% end %>
 			
 			<div class="well">
