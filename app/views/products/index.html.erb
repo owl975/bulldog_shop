@@ -4,6 +4,7 @@
   <div class="row">
     <div class='col-md-10'>
       <%= link_to 'New Product', new_product_path %>
+      <!-- CJ: avoid inline styling -- move to stylesheet :) -->
       <h3 style="color:#FF7800;">All the cool stuff!</h3>
       
         <% @products.each do |product| %>

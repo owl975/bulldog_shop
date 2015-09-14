@@ -1,3 +1,5 @@
+<!-- CJ: watch your indentation in this file to make your code easier to read and debug -->
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-1">
@@ -21,12 +23,14 @@
 
 <ul> 
 	<% @cart.each do | id, quantity | %>
+	<!-- CJ: it's best practice not to make database queries in your views, so I would store the entire product in @cart -->
 	<% product = Product.find_by_id(id) %>
 	<li> 
 		<%= link_to product.title, product %>
 		<%= number_to_currency(product.price, :unit => '$') %>
 		Qty = <%= quantity %>
 	</li>
+	<!-- CJ: also store total price in @cart to avoid calculations in view -->
 	<% total +=  quantity * product.price %>
 
 <% end %>
