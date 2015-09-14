@@ -3,11 +3,14 @@ Rails.application.routes.draw do
  
   get '/cart' => 'cart#index'
   get '/cart/clear' => 'cart#clearCart'
+  # CJ: I would refactor this route to a POST since it's adding info,
+  # rather than reading info
   get '/cart/:id' => 'cart#add'
 
   resources :products
   root 'page#home'
 
+  # CJ: I'd drop the `page` in the URL and just have `/about`, `/faq`, '/contact'
   get 'page/about'
 
   get 'page/faq'

@@ -5,6 +5,8 @@ class CartController < ApplicationController
   def add
   	id = params[:id]
   	#if cart has been created then use existing cart
+    # CJ: awesome logic around building cart -- I would move to
+    # a private method since it's used twice (`add` and `index` methods)
   	if session[:cart] then
   		cart = session[:cart]
   	else
@@ -17,10 +19,11 @@ class CartController < ApplicationController
   	else
   		cart[id] = 1
   	end
-  		redirect_to :action => :index
+  	redirect_to :action => :index
   end
 
   # clear the cart
+  # CJ: use snake_case here :)
   def clearCart
   	session[:cart] = nil
   	redirect_to :action => :index

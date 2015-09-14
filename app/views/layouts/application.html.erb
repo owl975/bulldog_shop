@@ -18,6 +18,7 @@
 
   <title>BulldogShop</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!-- CJ: move js to bottom of <body> for better load order -->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -63,6 +64,7 @@
 <p class="alert"><%= alert %></p>
 <%= yield %>
 
+<!-- CJ: use margin instead of multiple page breaks -->
 <br>
 <br>
 <br>
